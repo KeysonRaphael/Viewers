@@ -59,17 +59,17 @@ function TableSearchFilter(props) {
 
   const studyDatePresets = [
     {
-      text: t('Today'),
+      text: t('Hoje'),
       start: today,
       end: today,
     },
     {
-      text: t('Last 7 days'),
+      text: t('Ultimos 7 dias'),
       start: lastWeek,
       end: today,
     },
     {
-      text: t('Last 30 days'),
+      text: t('Ultimos 30 dias'),
       start: lastMonth,
       end: today,
     },

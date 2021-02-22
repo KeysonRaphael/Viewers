@@ -20,9 +20,9 @@
 
 .RoundedButtonGroup .roundedButtonWrapper .roundedButton {
   align-items: center;
-  background-color: var(--ui-gray-dark);
-  border: 2px solid var(--ui-border-color-dark);
-  color: var(--text-secondary-color);
+  background-color: #4f8c81;
+  /* border: 2px solid var(--ui-border-color-dark); */
+  color: white;
   display: flex;
   font-size: 15px;
   font-weight: 500;
@@ -36,7 +36,12 @@
   z-index: 1;
 }
 
-.roundedButtonWrapper .roundedButton svg .roundedButtonWrapper .roundedButton span {
+.roundedButtonWrapper
+  .roundedButton
+  svg
+  .roundedButtonWrapper
+  .roundedButton
+  span {
   margin: 0 2px;
 }
 

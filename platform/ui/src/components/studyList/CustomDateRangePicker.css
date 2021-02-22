@@ -43,15 +43,15 @@ is not yet selected. Edits the dates between your mouse and said date */
 /* Container - visual */
 .DateRangePickerInput {
   width: calc(100% - 10px); /* Just use padding? */
-  background-color: var(--datePicker-input-background);
-  border-color: var(--datePicker-input-background);
-  color: var(--datePicker-picker-text-input);
+  background-color: white;
+  border-color: white;
+  color: gray;
   height: 40px;
 }
 
 .DateRangePickerInput.DateRangePickerInput__withBorder {
   border-radius: 4px;
-  background-color: var(--datePicker-input-background);
+  background-color: white;
 }
 
 /* Input Container */
@@ -59,14 +59,14 @@ is not yet selected. Edits the dates between your mouse and said date */
   width: 97px;
   height: 38px;
   border-radius: 4px;
-  background-color: var(--datePicker-input-background);
+  background-color: white;
 }
 
 /* Actual Input Element */
 .DateInput > .DateInput_input {
   border-color: transparent;
   background-color: transparent;
-  color: var(--datePicker-picker-text-input);
+  color: black;
   height: 38px;
   font-size: 10pt;
   padding: 0;
