@@ -12,7 +12,7 @@ import {
   AiOutlineMonitor,
   AiOutlineMenu,
 } from 'react-icons/ai';
-import { BsFileText, BsCode } from 'react-icons/bs';
+import { BsFileText, BsCode, BsFillPersonFill } from 'react-icons/bs';
 
 const getContentFromUseMediaValue = (
   displaySize,
@@ -127,77 +127,141 @@ function StudyList(props) {
     .reduce((prev, next) => prev + next);
 
   return translationsAreReady ? (
-    <table className="table table--striped table--hoverable">
-      <colgroup>
-        {tableMeta.map((field, i) => {
-          const size = field.size;
-          const percentWidth = (size / totalSize) * 100.0;
-          return <col key={i} style={{ width: `${percentWidth}%` }} />;
-        })}
-      </colgroup>
-      <thead className="table-head">
-        <tr className="filters">
-          <TableSearchFilter
-            meta={tableMeta}
-            values={filterValues}
-            onSort={handleSort}
-            onValueChange={handleFilterChange}
-            sortFieldName={sort.fieldName}
-            sortDirection={sort.direction}
-            studyListDateFilterNumDays={studyListDateFilterNumDays}
-          />
-        </tr>
-      </thead>
-      <tbody className="table-body" data-cy="study-list-results">
-        {/* I'm not in love with this approach, but it's the quickest way for now
-         *
-         * - Display different content based on loading, empty, results state
-         *
-         * This is not ideal because it create a jump in focus. For loading especially,
-         * We should keep our current results visible while we load the new ones.
-         */}
-        {/* LOADING */}
-        {isLoading && (
-          <tr className="no-hover">
-            <td colSpan={tableMeta.length}>
-              <StudyListLoadingText />
-            </td>
-          </tr>
-        )}
-        {!isLoading && hasError && (
-          <tr className="no-hover">
-            <td colSpan={tableMeta.length}>
-              <div className="notFound">
-                {t('There was an error fetching studies')}
-              </div>
-            </td>
-          </tr>
-        )}
-        {/* EMPTY */}
-        {!isLoading && !studies.length && (
-          <tr className="no-hover">
-            <td colSpan={tableMeta.length}>
-              <div className="notFound">{t('No matching results')}</div>
-            </td>
-          </tr>
-        )}
-        {!isLoading &&
-          studies.map((study, index) => (
-            <TableRow
-              key={`${study.StudyInstanceUID}-${index}`}
-              onClick={StudyInstanceUID => handleSelectItem(StudyInstanceUID)}
-              AccessionNumber={study.AccessionNumber || ''}
-              modalities={study.modalities}
-              PatientID={study.PatientID || ''}
-              PatientName={study.PatientName || ''}
-              StudyDate={study.StudyDate}
-              StudyDescription={study.StudyDescription || ''}
-              StudyInstanceUID={study.StudyInstanceUID}
-              displaySize={displaySize}
+    <div>
+      <table className="table table--striped table--hoverable">
+        <colgroup>
+          {tableMeta.map((field, i) => {
+            const size = field.size;
+            const percentWidth = (size / totalSize) * 100.0;
+            return <col key={i} style={{ width: `${percentWidth}%` }} />;
+          })}
+        </colgroup>
+        <thead className="table-head">
+          <tr className="filters">
+            <TableSearchFilter
+              meta={tableMeta}
+              values={filterValues}
+              onSort={handleSort}
+              onValueChange={handleFilterChange}
+              sortFieldName={sort.fieldName}
+              sortDirection={sort.direction}
+              studyListDateFilterNumDays={studyListDateFilterNumDays}
             />
-          ))}
-      </tbody>
-    </table>
+          </tr>
+        </thead>
+      </table>
+      <table
+        className="table table--striped table--hoverable"
+        style={{
+          border: '1px solid #ddd',
+          textAlign: 'left',
+        }}
+      >
+        <thead>
+          <tr>
+            <th
+              style={{
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                paddingLeft: '8px',
+              }}
+            >
+              <b>Unidade</b>
+            </th>
+            <th
+              style={{
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                paddingLeft: '8px',
+              }}
+            >
+              <b>Prontuario</b>
+            </th>
+            <th
+              colSpan="3"
+              style={{
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                paddingLeft: '8px',
+              }}
+            >
+              <b>Paciente</b>
+            </th>
+            {/* <td>
+              <b>Tipo do exame</b>
+            </td> */}
+            <th
+              style={{
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                paddingLeft: '8px',
+              }}
+            >
+              <b>Data do exame</b>
+            </th>
+            <th
+              colSpan="3"
+              style={{
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                paddingLeft: '8px',
+              }}
+            >
+              <b>Descrição do exame</b>
+            </th>
+          </tr>
+        </thead>
+        <tbody className="table-body" data-cy="study-list-results">
+          {/* I'm not in love with this approach, but it's the quickest way for now
+           *
+           * - Display different content based on loading, empty, results state
+           *
+           * This is not ideal because it create a jump in focus. For loading especially,
+           * We should keep our current results visible while we load the new ones.
+           */}
+          {/* LOADING */}
+          {isLoading && (
+            <tr className="no-hover">
+              <td colSpan={tableMeta.length}>
+                <StudyListLoadingText />
+              </td>
+            </tr>
+          )}
+          {!isLoading && hasError && (
+            <tr className="no-hover">
+              <td colSpan={tableMeta.length}>
+                <div className="notFound">
+                  {t('There was an error fetching studies')}
+                </div>
+              </td>
+            </tr>
+          )}
+          {/* EMPTY */}
+          {!isLoading && !studies.length && (
+            <tr className="no-hover">
+              <td colSpan={tableMeta.length}>
+                <div className="notFound">{t('No matching results')}</div>
+              </td>
+            </tr>
+          )}
+          {!isLoading &&
+            studies.map((study, index) => (
+              <TableRow
+                key={`${study.StudyInstanceUID}-${index}`}
+                onClick={StudyInstanceUID => handleSelectItem(StudyInstanceUID)}
+                AccessionNumber={study.AccessionNumber || ''}
+                modalities={study.modalities}
+                PatientID={study.PatientID || ''}
+                PatientName={study.PatientName || ''}
+                StudyDate={study.StudyDate}
+                StudyDescription={study.StudyDescription || ''}
+                StudyInstanceUID={study.StudyInstanceUID}
+                displaySize={displaySize}
+              />
+            ))}
+        </tbody>
+      </table>
+    </div>
   ) : null;
 }
 
@@ -239,14 +303,13 @@ function TableRow(props) {
     // isHighlighted,
     // modalities,
     // PatientID, //id do paciente(Ac. Number)2619416
-    RecordID = '2089970', //id do prontuario
-    PatientName, //nome do paciente
-    UnityName = 'chn', //nome da unidade
-    StudyDate,
+    RecordID = '2089970', //id do prontuario 1
+    PatientName, //nome do paciente 1
+    UnityName = 'chn', //nome da unidade 1
+    StudyDate, // 1
     // StudyDescription,
-    ExamDescription = 'DOPPLER VENOSO PROFUNDO DE MEMBRO INFERIOR DIREITO', //descrição do exame
-    ExamStatus = 'Sem Laudo', //status do exame
-    // ExamDate = '15/02/2021', //data do exame
+    ExamDescription = 'DOPPLER VENOSO PROFUNDO DE MEMBRO INFERIOR DIREITO', //descrição do exame 1
+    ExamStatus = 'Sem Laudo', //status do exame (mostrar apenas alguma indicação de cor da situação)
     ExamType = 'Radiologia', //tipo do exame
     StudyInstanceUID,
     onClick: handleClick,
@@ -429,201 +492,232 @@ function TableRow(props) {
     </tr>
   );
   const mediumRowTemplate = (
-    <tr>
+    // <tr>
+    //   <td colSpan="3">
+    //     <div
+    //       style={{
+    //         width: '100%',
+    //         borderRadius: '5px 5px 5px 5px',
+    //         border: '1px solid #ddd',
+    //         textTransform: 'capitalize',
+    //         fontSize: '14px',
+    //       }}
+    //     >
+    //       {/* PatientID, //id do paciente(Ac. Number) */}
+    //       <div
+    //         style={{
+    //           backgroundColor: '#4f8c81',
+    //           height: '5px',
+    //         }}
+    //       ></div>
+
+    //       <div style={{ columnCount: '3', display: 'grid' }}>
+    //         <div
+    //           style={{
+    //             borderStyle: 'solid',
+    //             borderColor: '#ddd',
+    //             borderWidth: '1px',
+    //             borderTop: '0px',
+    //             borderLeft: '0px',
+    //             display: 'flex',
+    //             gridColumnStart: '1',
+    //             gridColumnEnd: '1',
+    //           }}
+    //         >
+    //           <div
+    //             style={{
+    //               width: '10%',
+    //               textAlign: 'center',
+    //               marginTop: '10px',
+    //             }}
+    //           >
+    //             <AiFillHome />
+    //           </div>
+    //           <div style={{ width: '90%' }}>
+    //             <b>Unidade</b>
+    //             <br></br> {UnityName}
+    //           </div>
+    //         </div>
+    //         <div
+    //           style={{
+    //             borderStyle: 'solid',
+    //             borderWidth: '1px',
+    //             borderLeft: '0px',
+    //             borderColor: '#ddd',
+    //             display: 'flex',
+    //             gridColumnStart: '2',
+    //             gridColumnEnd: '2',
+    //           }}
+    //         >
+    //           <div
+    //             style={{
+    //               width: '10%',
+    //               textAlign: 'center',
+    //               marginTop: '10px',
+    //             }}
+    //           >
+    //             <BsCode />
+    //           </div>
+    //           <div style={{ width: '90%' }}>
+    //             <b>Id do prontuario</b>
+    //             <br></br> {RecordID}
+    //           </div>
+    //         </div>
+    //         <div
+    //           style={{
+    //             borderStyle: 'solid',
+    //             borderWidth: '1px',
+    //             borderRight: '0px',
+    //             borderColor: '#ddd',
+    //             display: 'flex',
+    //             gridColumnStart: '3',
+    //             gridColumnEnd: '3',
+    //           }}
+    //         >
+    //           <div
+    //             style={{
+    //               width: '10%',
+    //               textAlign: 'center',
+    //               marginTop: '10px',
+    //             }}
+    //           >
+    //             <BsFillPersonFill />
+    //           </div>
+    //           <div style={{ width: '90%' }}>
+    //             <b>Paciente</b>
+    //             <br></br> {PatientName ? PatientName : 'Sem Nome'}
+    //           </div>
+    //         </div>
+    //       </div>
+
+    //       <div
+    //         style={{ columnCount: '3', display: 'grid', marginBottom: '10px' }}
+    //       >
+    //         <div
+    //           style={{
+    //             borderStyle: 'solid',
+    //             borderWidth: '1px',
+    //             borderRight: '0px',
+    //             borderLeft: '0px',
+    //             borderTop: '0px',
+    //             borderColor: '#ddd',
+    //             display: 'flex',
+    //             gridColumnStart: '1',
+    //             gridColumnEnd: '1',
+    //           }}
+    //         >
+    //           <div
+    //             style={{
+    //               width: '10%',
+    //               textAlign: 'center',
+    //               marginTop: '10px',
+    //             }}
+    //           >
+    //             <AiOutlineMenu />
+    //           </div>
+    //           <div style={{ width: '90%' }}>
+    //             <b>Tipo do exame</b>
+    //             <br></br> {ExamType}
+    //           </div>
+    //         </div>
+    //         <div
+    //           style={{
+    //             borderStyle: 'solid',
+    //             borderWidth: '1px',
+    //             borderColor: '#ddd',
+    //             borderTop: '0px',
+    //             borderRight: '0px',
+    //             display: 'flex',
+    //             gridColumnStart: '2',
+    //             gridColumnEnd: '2',
+    //           }}
+    //         >
+    //           <div
+    //             style={{
+    //               width: '10%',
+    //               textAlign: 'center',
+    //               marginTop: '10px',
+    //             }}
+    //           >
+    //             <BsFileText />
+    //           </div>
+    //           <div style={{ width: '90%' }}>
+    //             <b>Descrição do exame</b>
+    //             <br></br> {ExamDescription}
+    //           </div>
+    //         </div>
+    //         <div
+    //           style={{
+    //             borderStyle: 'solid',
+    //             borderWidth: '1px',
+    //             borderRight: '0px',
+    //             borderTop: '0px',
+    //             borderColor: '#ddd',
+    //             display: 'flex',
+    //             gridColumnStart: '3',
+    //             gridColumnEnd: '3',
+    //           }}
+    //         >
+    //           <div
+    //             style={{
+    //               width: '10%',
+    //               textAlign: 'center',
+    //               marginTop: '10px',
+    //             }}
+    //           >
+    //             <AiFillCalendar />
+    //           </div>
+    //           <div style={{ width: '90%' }}>
+    //             <b>Data do exame</b>
+    //             <br></br> {StudyDate}
+    //           </div>
+    //         </div>
+    //       </div>
+
+    //       <div
+    //         style={{
+    //           columnCount: '3',
+    //           textAlign: 'center',
+    //           borderTop: '1px solid #ddd',
+    //           fontSize: '14px',
+    //         }}
+    //       >
+    //         <div
+    //           style={{ borderRight: '1px solid #ddd' }}
+    //           onClick={() => handleClick(StudyInstanceUID)}
+    //         >
+    //           Exame
+    //         </div>
+    //         <div
+    //           style={{
+    //             borderRight: '1px solid #ddd',
+    //             borderLeft: '1px solid #ddd',
+    //           }}
+    //         >
+    //           Laudo
+    //         </div>
+    //         <div style={{ borderLeft: '1px solid #ddd' }}>Compartilhar</div>
+    //       </div>
+    //     </div>
+    //   </td>
+    // </tr>
+    <tr
+      onClick={() => handleClick(StudyInstanceUID)}
+      style={{
+        width: '100%',
+        border: '1px solid #ddd',
+        borderRadius: '5px',
+        borderCollapse: 'initial',
+      }}
+    >
+      <td>{UnityName}</td>
+      <td>{RecordID}</td>
       <td colSpan="3">
-        <div
-          style={{
-            width: '100%',
-            borderRadius: '5px 5px 5px 5px',
-            border: '1px solid #ddd',
-            textTransform: 'capitalize',
-            fontSize: '14px',
-          }}
-        >
-          {/* PatientID, //id do paciente(Ac. Number) */}
-          <div
-            style={{
-              backgroundColor: '#4f8c81',
-              color: 'white',
-              textAlign: 'center',
-              textTransform: 'capitalize',
-              fontSize: '16px',
-            }}
-          >
-            {PatientName ? PatientName : 'Sem Nome'}
-          </div>
-          <div style={{ columnCount: '2' }}>
-            <div>
-              <div
-                style={{
-                  borderStyle: 'solid',
-                  borderColor: '#ddd',
-                  borderWidth: '1px',
-                  borderTop: '0px',
-                  borderLeft: '0px',
-                  display: 'flex',
-                }}
-              >
-                <div
-                  style={{
-                    width: '10%',
-                    textAlign: 'center',
-                    marginTop: '10px',
-                  }}
-                >
-                  <AiFillHome />
-                </div>
-                <div style={{ width: '90%' }}>
-                  Unidade<br></br> {UnityName}
-                </div>
-              </div>
-              <br></br>
-              <div
-                style={{
-                  borderStyle: 'solid',
-                  borderWidth: '1px',
-                  borderLeft: '0px',
-                  borderColor: '#ddd',
-                  display: 'flex',
-                }}
-              >
-                <div
-                  style={{
-                    width: '10%',
-                    textAlign: 'center',
-                    marginTop: '10px',
-                  }}
-                >
-                  <BsCode />
-                </div>
-                <div style={{ width: '90%' }}>
-                  Id do prontuario<br></br> {RecordID}
-                </div>
-              </div>
-              <br></br>
-              <div
-                style={{
-                  borderStyle: 'solid',
-                  borderWidth: '1px',
-                  borderLeft: '0px',
-                  borderBottom: '0px',
-                  borderColor: '#ddd',
-                  display: 'flex',
-                }}
-              >
-                <div
-                  style={{
-                    width: '10%',
-                    textAlign: 'center',
-                    marginTop: '10px',
-                  }}
-                >
-                  <BsFileText />
-                </div>
-                <div style={{ width: '90%' }}>
-                  Descrição do exame<br></br> {ExamDescription}
-                </div>
-              </div>
-            </div>
-            <div>
-              <div
-                style={{
-                  borderStyle: 'solid',
-                  borderWidth: '1px',
-                  borderRight: '0px',
-                  borderTop: '0px',
-                  borderColor: '#ddd',
-                  display: 'flex',
-                }}
-              >
-                <div
-                  style={{
-                    width: '10%',
-                    textAlign: 'center',
-                    marginTop: '10px',
-                  }}
-                >
-                  <AiOutlineMonitor />
-                </div>
-                <div style={{ width: '90%' }}>
-                  Status do exame<br></br> {ExamStatus}
-                </div>
-              </div>
-              <br></br>
-              <div
-                style={{
-                  borderStyle: 'solid',
-                  borderWidth: '1px',
-                  borderRight: '0px',
-                  borderColor: '#ddd',
-                  display: 'flex',
-                }}
-              >
-                <div
-                  style={{
-                    width: '10%',
-                    textAlign: 'center',
-                    marginTop: '10px',
-                  }}
-                >
-                  <AiFillCalendar />
-                </div>
-                <div style={{ width: '90%' }}>
-                  Data do exame<br></br> {StudyDate}
-                </div>
-              </div>
-              <br></br>
-              <div
-                style={{
-                  borderStyle: 'solid',
-                  borderWidth: '1px',
-                  borderBottom: '0px',
-                  borderRight: '0px',
-                  borderColor: '#ddd',
-                  display: 'flex',
-                }}
-              >
-                <div
-                  style={{
-                    width: '10%',
-                    textAlign: 'center',
-                    marginTop: '10px',
-                  }}
-                >
-                  <AiOutlineMenu />
-                </div>
-                <div style={{ width: '90%' }}>
-                  Tipo do exame<br></br> {ExamType}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              columnCount: '3',
-              textAlign: 'center',
-              borderTop: '1px solid #ddd',
-              fontSize: '14px',
-            }}
-          >
-            <div
-              style={{ borderRight: '1px solid #ddd' }}
-              onClick={() => handleClick(StudyInstanceUID)}
-            >
-              Exame
-            </div>
-            <div
-              style={{
-                borderRight: '1px solid #ddd',
-                borderLeft: '1px solid #ddd',
-              }}
-            >
-              Laudo
-            </div>
-            <div style={{ borderLeft: '1px solid #ddd' }}>Compartilhar</div>
-          </div>
-        </div>
+        {PatientName ? PatientName : 'GABRIEL FREIRE DA SILVA DE SOUSA'}
       </td>
+      {/* <td>{ExamType}</td> */}
+      <td>{StudyDate}</td>
+      <td colSpan="3">{ExamDescription}</td>
     </tr>
   );
   const smallRowTemplate = (
