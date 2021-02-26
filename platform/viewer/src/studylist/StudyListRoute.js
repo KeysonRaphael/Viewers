@@ -37,6 +37,7 @@ function StudyListRoute(props) {
     studyDateFrom: null,
     PatientName: '',
     PatientID: '',
+    UnityName: '',
     AccessionNumber: '',
     StudyDate: '',
     modalities: '',
@@ -433,7 +434,7 @@ function _sortStudies(studies, field, order) {
   });
 
   // Sort by field
-  sortedStudies.sort(function(a, b) {
+  sortedStudies.sort(function (a, b) {
     let fieldA = a[field];
     let fieldB = b[field];
     if (field === 'StudyDate') {
