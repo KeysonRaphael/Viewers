@@ -151,7 +151,11 @@ function StudyList(props) {
         }}
       >
         <thead>
-          <tr>
+          <tr style={{
+            border: '1px solid #ddd',
+            borderRadius: '5px',
+            borderCollapse: 'initial',
+          }}>
             <th
               style={{
                 paddingTop: '8px',
@@ -341,12 +345,6 @@ function TableRow(props) {
   const mediumRowTemplate = (
     <tr
       onClick={() => handleClick(StudyInstanceUID)}
-      style={{
-        width: '100%',
-        border: '1px solid #ddd',
-        borderRadius: '5px',
-        borderCollapse: 'initial',
-      }}
     >
       <td>{UnityName}</td>
       <td>{RecordID}</td>
