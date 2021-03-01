@@ -1,6 +1,6 @@
 # Embedded Viewer
 
-The quickest and easiest way to get the OHIF Viewer up and running is to embed
+The quickest and easiest way to get the mConnect Viewer up and running is to embed
 it into an existing web application. It allows us to forego a "build step", and
 add a powerful medical imaging viewer to an existing web page using only a few
 include tags. Here's how it works:
@@ -24,7 +24,7 @@ include tags. Here's how it works:
 </ul>
 
 <ol start="2">
-  <li>Create a JS Object or Function to hold the OHIF Viewer's configuration. Here are some
+  <li>Create a JS Object or Function to hold the mConnect Viewer's configuration. Here are some
    example values that would allow the viewer to hit our public PACS:</li>
 </ol>
 
@@ -49,7 +49,7 @@ window.config = {
 };
 ```
 
-To learn more about how you can configure the OHIF Viewer, check out our
+To learn more about how you can configure the mConnect Viewer, check out our
 [Configuration Guide](../../configuring/index.md).
 
 <ol start="3"><li>
@@ -60,7 +60,7 @@ To learn more about how you can configure the OHIF Viewer, check out our
 // Made available by the `@ohif/viewer` script included in step 1
 var containerId = 'id-of-div-to-render-component-to';
 var componentRenderedOrUpdatedCallback = function() {
-  console.log('OHIF Viewer rendered/updated');
+  console.log('mConnect Viewer rendered/updated');
 };
 window.OHIFViewer.installViewer(
   window.config,
@@ -73,7 +73,7 @@ You can see a live example of this recipe in [this CodeSandbox][code-sandbox].
 
 ## Add Extensions
 
-The UMD build of the OHIF Viewer is a "light weight" build that only contains
+The UMD build of the mConnect Viewer is a "light weight" build that only contains
 the core extensions required for basic 2D image viewing. It's possible to add
 other extensions at runtime.
 
@@ -111,7 +111,7 @@ First, check out this fully functional [CodeSandbox][code-sandbox] example. If
 you're still having trouble, feel free to search or GitHub issues. Can't find
 anything related your problem? Create a new one.
 
-> My application's styles are impacting the OHIF Viewer's look and feel. What
+> My application's styles are impacting the mConnect Viewer's look and feel. What
 > can I do?
 
 When you include stylesheets and scripts, they are added globally. This has the
@@ -123,7 +123,7 @@ Good. Now `embed` that new page using an
 This should produce the expected result while also protecting your page from any
 globally defined styles/scripts.
 
-> We're trying to embed the OHIF Viewer into an existing React App, but seeing
+> We're trying to embed the mConnect Viewer into an existing React App, but seeing
 > react-dom and react conflicts. What can we do?
 
 If you are installing OHIF viewer inside another react app, you may use `installViewer` as follows:
@@ -133,7 +133,7 @@ import { installViewer } from '@ohif/viewer'
 const ohifViewerConfig = window.config // or set it here
 const containerId = 'ohif'
 const componentRenderedOrUpdatedCallback = function() {
-    console.log('OHIF Viewer rendered/updated');
+    console.log('mConnect Viewer rendered/updated');
 };
 
 componentDidMount() {

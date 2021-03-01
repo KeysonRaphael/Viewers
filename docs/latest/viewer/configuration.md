@@ -39,7 +39,7 @@ window.config = {
     },
   },
   /**
-   * Internally, the OHIF Viewer fetches data primarily with the
+   * Internally, the mConnect Viewer fetches data primarily with the
    * `cornerstoneWADOImageLoader` and the `DICOMWebClient`. If either of these
    * receive a non-200 response, this method allows you to handle that error.
    *

@@ -1,7 +1,7 @@
 {
   "name": "@ohif/i18n",
   "version": "0.53.0",
-  "description": "Internationalization library for The OHIF Viewer",
+  "description": "Internationalization library for The mConnect Viewer",
   "author": "OHIF",
   "license": "MIT",
   "repository": "OHIF/Viewers",

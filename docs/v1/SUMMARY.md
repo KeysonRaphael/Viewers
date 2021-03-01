@@ -1,4 +1,4 @@
-# OHIF Viewers
+# mConnect Viewers
 
 - Essentials
   - [Installation](essentials/installation.md)
@@ -32,7 +32,7 @@
 ----
 
 - Example Applications
-  - [OHIF Viewer](example-applications/ohif-viewer.md)
+  - [mConnect Viewer](example-applications/ohif-viewer.md)
   - [Lesion Tracker](example-applications/lesion-tracker.md)
   - [Standalone Viewer](example-applications/standalone-viewer.md)
 

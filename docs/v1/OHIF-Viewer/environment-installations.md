@@ -84,7 +84,7 @@ Expected result:
 
 ![image alt text](image_3.png)
 
-5. Use the following command to set up the stable repository. 
+5. Use the following command to set up the stable repository.
 
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
@@ -325,7 +325,7 @@ Expected result:
 
 ![image alt text](image_23.png)
 
-## Starting OHIF Viewer after system restart
+## Starting mConnect Viewer after system restart
 
 These are the steps to run OHIFVIewer after system restart:.
 
@@ -339,57 +339,8 @@ docker-compose -p dcm4chee start
 
 4. Access the Viewers/OHIFViewer folder, on your Home folder
 
-5. Run the following command in order to run OHIF Viewer:
+5. Run the following command in order to run mConnect Viewer:
 
 ./bin/dcm4cheeDICOMWeb.sh
 
-6. Access the address [http://localhost:3000](http://localhost:3000) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+6. Access the address [http://localhost:3000](http://localhost:3000)

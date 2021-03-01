@@ -28,7 +28,7 @@ Archive                                    | Installation
 
 *Feel free to make a Pull Request if you want to add to this list.*
 
-## Set up and test the OHIF Viewer (or LesionTracker) application:
+## Set up and test the mConnect Viewer (or LesionTracker) application:
 1. [Install Meteor](https://www.meteor.com/install)
 2. Open a new terminal tab in one of the Application directories (OHIFViewer or LesionTracker)
 3. Instruct Meteor to install all dependent NPM Packages
@@ -45,7 +45,7 @@ Archive                                    | Installation
 
   **Note:** On Windows, you may need to set PACKAGE_DIRS="../Packages" in your Environment Variables in your operating system settings.
 
-5. Launch the OHIF Viewer / Lesion Tracker Study List by visiting [http://localhost:3000/](http://localhost:3000/) in a web browser.
+5. Launch the mConnect Viewer / Lesion Tracker Study List by visiting [http://localhost:3000/](http://localhost:3000/) in a web browser.
 
   **If everything is working correctly, you should see the Study List from your archive when you visit the Study List.**
 

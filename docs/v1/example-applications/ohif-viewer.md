@@ -1,1 +1,1 @@
-# OHIF Viewer
+# mConnect Viewer

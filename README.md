@@ -2,7 +2,7 @@
 <!-- markdownlint-disable -->
 <div align="center">
   <h1>OHIF Medical Imaging Viewer</h1>
-  <p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
+  <p><strong>The mConnect Viewer</strong> is a zero-footprint medical image viewer provided by the <a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/dicomweb/">DICOMweb</a>.</p>
 </div>
 
 
@@ -47,7 +47,7 @@ improving Extension System.
 
 ### Community & Experience
 
-The OHIF Viewer is a collaborative effort that has served as the basis for many
+The mConnect Viewer is a collaborative effort that has served as the basis for many
 active, production, and FDA Cleared medical imaging viewers. It benefits from
 our extensive community's collective experience, and from the sponsored
 contributions of individuals, research groups, and commercial organizations.
@@ -55,7 +55,7 @@ contributions of individuals, research groups, and commercial organizations.
 ### Built to Adapt
 
 After more than 5-years of integrating with many companies and organizations,
-The OHIF Viewer has been rebuilt from the ground up to better address the
+The mConnect Viewer has been rebuilt from the ground up to better address the
 varying workflow and configuration needs of its many users. All of the Viewer's
 core features are built using it's own extension system. The same extensibility
 that allows us to offer:
@@ -88,20 +88,20 @@ questions; please read our
 
 ## Quick Start Deployment
 
-> This is only one of many ways to configure and deploy the OHIF Viewer. To
+> This is only one of many ways to configure and deploy the mConnect Viewer. To
 > learn more about your options, and how to choose the best one for your
 > requirements, check out
 > [our deployment recipes and documentation](https://docs.ohif.org/deployment/).
 
-The fastest and easiest way to get started is to include the OHIF Viewer with a
+The fastest and easiest way to get started is to include the mConnect Viewer with a
 script tag. In practice, this is as simple as:
 
 - Including the following dependencies with script tags:
   - [React](https://unpkg.com/react@16/umd/react.production.min.js)
   - [React Dom](https://unpkg.com/react-dom@16/umd/react-dom.production.min.js)
-  - The [OHIF Viewer](https://unpkg.com/@ohif/viewer)
+  - The [mConnect Viewer](https://unpkg.com/@ohif/viewer)
 - Have an element with an ID of `root` on the page
-- Configure the OHIF Viewer at `window.config`:
+- Configure the mConnect Viewer at `window.config`:
 
 ```js
 window.config = {
@@ -220,7 +220,7 @@ These projects comprise the
 | ------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------- |
 | [@ohif/core][platform-core]     | Business logic and classes that model the data, services, and extensions that are framework agnostic | [NPM][core-npm]   |
 | [@ohif/i18n][platform-i18n]     | Language files and small API for wrapping component/ui text for translations                         | [NPM][i18n-npm]   |
-| [@ohif/viewer][platform-viewer] | The OHIF Viewer. Where we consume and configure all platform library's and extensions                | [NPM][viewer-npm] |
+| [@ohif/viewer][platform-viewer] | The mConnect Viewer. Where we consume and configure all platform library's and extensions                | [NPM][viewer-npm] |
 | [@ohif/ui][platform-ui]         | Reusable React components we consume and compose to build our Viewer's UI                            | [NPM][ui-npm]     |
 
 ### Extensions
@@ -239,7 +239,7 @@ can [read more about extensions here][ohif-extensions].
 
 ## Acknowledgments
 
-To acknowledge the OHIF Viewer in an academic publication, please cite
+To acknowledge the mConnect Viewer in an academic publication, please cite
 
 > _LesionTracker: Extensible Open-Source Zero-Footprint Web Viewer for Cancer
 > Imaging Research and Clinical Trials_

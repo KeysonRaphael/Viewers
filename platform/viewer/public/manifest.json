@@ -1,7 +1,7 @@
 {
-  "name": "OHIF Viewer",
+  "name": "mConnect Viewer",
   "short_name": "Viewer",
-  "description": "OHIF Viewer",
+  "description": "mConnect Viewer",
   "dir": "auto",
   "lang": "en-US",
   "orientation": "any",

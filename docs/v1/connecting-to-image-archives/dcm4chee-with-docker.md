@@ -16,7 +16,7 @@
 
     **Note:** If you are running this on Mac OSX you will probably need to change the default docker-compose.yml file slightly. Specifically, the paths that refer to /var/local/ will likely need to be changed to /opt/
 
-3. Run the OHIF Viewer or Lesion Tracker using the dcm4cheeDIMSE.json configuration file
+3. Run the mConnect Viewer or Lesion Tracker using the dcm4cheeDIMSE.json configuration file
 
 ````bash
 cd OHIFViewer

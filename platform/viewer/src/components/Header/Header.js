@@ -33,7 +33,7 @@ function Header(props) {
         onClick: () =>
           show({
             content: AboutContent,
-            title: t('OHIF Viewer - About'),
+            title: t('mConnect Viewer - About'),
           }),
       },
       {

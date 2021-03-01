@@ -1,4 +1,4 @@
-# OHIF Viewers
+# mConnect Viewers
 
 - [Our Process](our-process.md)
 - Development

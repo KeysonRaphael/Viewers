@@ -43,9 +43,9 @@ be useful:
 **Please file a Pull Request if you wish to add your name or organization to
 this list.**
 
-### Does The OHIF Viewer have [510(k) Clearance][501k-clearance] from the U.S. F.D.A or [CE Marking][ce-marking] from the European Commission?
+### Does The mConnect Viewer have [510(k) Clearance][501k-clearance] from the U.S. F.D.A or [CE Marking][ce-marking] from the European Commission?
 
-**NO.** The OHIF Viewer is **NOT** F.D.A. cleared or CE Marked. It is the users
+**NO.** The mConnect Viewer is **NOT** F.D.A. cleared or CE Marked. It is the users
 responsibility to ensure compliance with applicable rules and regulations. The
 [License](https://github.com/OHIF/Viewers/blob/master/LICENSE) for the OHIF
 Platform does not prevent your company or group from seeking F.D.A. clearance
@@ -54,9 +54,9 @@ for a product built using the platform.
 If you have gone this route (or are going there), please let us know because we
 would be interested to hear about your experience.
 
-### Is The OHIF Viewer [HIPAA][hipaa-def] Compliant?
+### Is The mConnect Viewer [HIPAA][hipaa-def] Compliant?
 
-**NO.** The OHIF Viewer **DOES NOT** fulfill all of the criteria to become HIPAA
+**NO.** The mConnect Viewer **DOES NOT** fulfill all of the criteria to become HIPAA
 Compliant. It is the users responsibility to ensure compliance with applicable
 rules and regulations.
 

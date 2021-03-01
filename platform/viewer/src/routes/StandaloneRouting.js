@@ -47,7 +47,7 @@ class StandaloneRouting extends Component {
       });
 
       // When the JSON has been returned, parse it into a JavaScript Object
-      // and render the OHIF Viewer with this data
+      // and render the mConnect Viewer with this data
       oReq.addEventListener('load', event => {
         if (event.target.status === 404) {
           reject(new Error('No JSON data found'));
@@ -172,12 +172,12 @@ class StandaloneRouting extends Component {
     return this.state.studies ? (
       <ConnectedViewer studies={this.state.studies} />
     ) : (
-      <ConnectedViewerRetrieveStudyData
-        studyInstanceUIDs={this.state.studyInstanceUIDs}
-        seriesInstanceUIDs={this.state.seriesInstanceUIDs}
-        server={this.state.server}
-      />
-    );
+        <ConnectedViewerRetrieveStudyData
+          studyInstanceUIDs={this.state.studyInstanceUIDs}
+          seriesInstanceUIDs={this.state.seriesInstanceUIDs}
+          server={this.state.server}
+        />
+      );
   }
 }
 

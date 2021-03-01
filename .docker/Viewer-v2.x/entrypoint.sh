@@ -34,6 +34,6 @@ if [ -n "${PORT}" ]
     sed -i -e "s/listen 80/listen ${PORT}/g" /etc/nginx/conf.d/default.conf
 fi
 
-echo "Starting Nginx to serve the OHIF Viewer..."
+echo "Starting Nginx to serve the mConnect Viewer..."
 
 exec "$@"

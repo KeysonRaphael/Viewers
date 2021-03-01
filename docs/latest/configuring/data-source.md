@@ -2,7 +2,7 @@
 
 After following the steps outlined in
 [Getting Started](./../development/getting-started.md), you'll notice that the
-OHIF Viewer has data for several studies and their images. You didn't add this
+mConnect Viewer has data for several studies and their images. You didn't add this
 data, so where is it coming from?
 
 By default, the viewer is configured to connect to a remote server hosted by the
@@ -15,7 +15,7 @@ remotely.
 > ATTENTION! Already have a remote or local server? Skip to the
 > [configuration section](#configuration-learn-more) below.
 
-While the OHIF Viewer can work with any data source, the easiest to configure
+While the mConnect Viewer can work with any data source, the easiest to configure
 are the ones that follow the [DICOMWeb][dicom-web] spec.
 
 1. Choose and install an Image Archive
@@ -130,7 +130,7 @@ window.config = {
 };
 ```
 
-To learn more about how you can configure the OHIF Viewer, check out our
+To learn more about how you can configure the mConnect Viewer, check out our
 [Configuration Guide](./index.md).
 
 ## Open Source DICOM Image Archives

@@ -26,7 +26,7 @@ listed in the `UserPreferences` modal.
 
 You can read more about [`Commands`][docs-commands], [`Hotkeys`][docs-hotkeys],
 and the [`UserPreferences` Modal][docs-userprefs] in their respective locations
-in the OHIF Viewer's documentation.
+in the mConnect Viewer's documentation.
 
 | Command Name                 | Description                             | Store Contexts |
 | ---------------------------- | --------------------------------------- | -------------- |

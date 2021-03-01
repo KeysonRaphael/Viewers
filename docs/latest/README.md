@@ -1,7 +1,7 @@
 <div class='row'>
 	<div class='column' style='text-align: right; padding: 0 20px'>
 		<strong>Looking for a Live Demo?</strong>
-		<a href="http://viewer.ohif.org/">Preview The OHIF Viewer</a>
+		<a href="http://viewer.ohif.org/">Preview The mConnect Viewer</a>
 	</div>
 	<div class='column' style='text-align: left; padding: 0 20px'>
 		<a href="https://www.netlify.com">
@@ -23,9 +23,9 @@ Archives that support [DicomWeb][dicom-web], and offers support for mapping to
 proprietary API formats. OHIF maintained extensions add support for viewing,
 annotating, and reporting on DICOM images in 2D (slices) and 3D (volumes).
 
-![OHIF Viewer Screenshot](../assets/img/viewer.png)
+![mConnect Viewer Screenshot](../assets/img/viewer.png)
 
-<center><i>The <strong>OHIF Viewer</strong>: A general purpose DICOM Viewer (<a href="http://viewer.ohif.org/">Live Demo</a>)</center>
+<center><i>The <strong>mConnect Viewer</strong>: A general purpose DICOM Viewer (<a href="http://viewer.ohif.org/">Live Demo</a>)</center>
 
 The Open Health Imaging Foundation intends to provide a simple general purpose
 DICOM Viewer which can be easily extended for specific uses. If you find

@@ -1,2 +1,2 @@
 
-This folder contains the OHIF Viewer documentation
+This folder contains the mConnect Viewer documentation

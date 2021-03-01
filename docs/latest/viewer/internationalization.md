@@ -82,7 +82,7 @@ function MyComponent({ t, i18n }) {
 export default withTranslation('MyNameSpace')(MyComponent);
 ```
 
-> Important: if you are using React outside the OHIF Viewer, check the
+> Important: if you are using React outside the mConnect Viewer, check the
 > [I18nextProvider](#using-outside-of-ohif-viewer) section, `withTranslation`
 > HOC doesnt works without a I18nextProvider
 
@@ -94,9 +94,9 @@ requires at least React > 16.8 😉
 
 ### Using outside of OHIF viewer
 
-OHIF Viewer already sets a main
+mConnect Viewer already sets a main
 [I18nextProvider](https://react.i18next.com/latest/i18nextprovider) connected to
-the shared i18n instance from `@ohif/i18n`, all extensions inside OHIF Viewer
+the shared i18n instance from `@ohif/i18n`, all extensions inside mConnect Viewer
 will share this same provider at the end, you don't need to set new providers at
 all.
 
@@ -284,7 +284,7 @@ detector config as parameter.
 
 ### Changing the language
 
-OHIF Viewer accepts a query param called `lng` in the url to change the
+mConnect Viewer accepts a query param called `lng` in the url to change the
 language.
 
 E.g.

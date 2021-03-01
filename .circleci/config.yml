@@ -159,7 +159,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
       # Build & Test
       - run:
-          name: 'Build the OHIF Viewer'
+          name: 'Build the mConnect Viewer'
           command: yarn run build
           no_output_timeout: 45m
       # - run:
