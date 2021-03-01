@@ -89,7 +89,7 @@ function TableSearchFilter(props) {
           >
             {`${displayText == 'Patient Name / MRN' ? 'Nome do Paciente' : ''}`}
             {`${displayText == 'Description' ? 'Descrição do exame' : ''}`}
-            {`${displayText == 'Study Date' ? 'Data do estudo' : ''}`}
+            {`${displayText == 'Study Date' ? 'Data' : ''}`}
             <Icon name={sortIcon} style={{ fontSize: '12px' }} />
           </label>
           {inputType === 'text' && (
