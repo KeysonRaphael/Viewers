@@ -227,10 +227,10 @@ function StudyListRoute(props) {
           </UserManagerContext.Consumer>
         )}
       </WhiteLabelingContext.Consumer>
-      {/* <div className="study-list-header">
+      <div className="study-list-header">
         <div className="header">
           <h1 style={{ fontWeight: 300, fontSize: '22px' }}>
-            {t('StudyList')}
+            {t('Lista de estudos')}
           </h1>
         </div>
         <div className="actions">
@@ -242,7 +242,7 @@ function StudyListRoute(props) {
           )}
           <span className="study-count">{studies.length}</span>
         </div>
-      </div> */}
+      </div>
 
       <div className="table-head-background" />
       <div className="study-list-container">

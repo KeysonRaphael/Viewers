@@ -86,7 +86,7 @@ const definitions = [
   */
   {
     id: 'changeSlabThickness',
-    label: 'Slab Thickness',
+    label: 'Espaçamento',
     icon: 'soft-tissue',
     CustomComponent: SlabThicknessToolbarComponent,
     commandName: 'setSlabThickness',

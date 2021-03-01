@@ -33,7 +33,7 @@ export function ToolbarButton(props) {
     >
       {iconProps && <Icon {...iconProps} />}
       <div className="toolbar-button-label">
-        {t(label)}
+        {t(label) == 'Annotate' ? 'Seta com texto' : t(label)}
         {arrowIcon}
       </div>
     </div>

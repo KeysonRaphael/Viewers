@@ -13,7 +13,9 @@ const SLIDER = {
 
 const ToolbarLabel = props => {
   const { label } = props;
-  return <div className="toolbar-button-label">{label}</div>;
+  return <div className="toolbar-button-label">
+    {label == 'Navegar Stacks' ? 'Stacks' : label}
+  </div>;
 };
 
 ToolbarLabel.propTypes = {

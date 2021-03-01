@@ -59,7 +59,9 @@ class RoundedButtonGroup extends Component {
         typeof option.icon === 'string' ? { name: option.icon } : option.icon;
 
       const bottomLabel = option.bottomLabel && (
-        <div className="bottomLabel">{option.bottomLabel}</div>
+        <div className="bottomLabel">
+          {option.bottomLabel == 'Measurements' ? 'Anotações' : option.bottomLabel}
+        </div>
       );
 
       return (
