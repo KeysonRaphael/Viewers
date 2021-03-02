@@ -31,14 +31,14 @@ class SimpleDialog extends Component {
               className="btn btn-cancel"
               onClick={this.props.onClose}
             >
-              Cancel
+              Cancelar
             </button>
             <button
               type="button"
               className="btn btn-confirm"
               onClick={this.props.onConfirm}
             >
-              Confirm
+              Confirmar
             </button>
           </div>
         </form>

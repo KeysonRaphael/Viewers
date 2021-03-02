@@ -171,7 +171,7 @@ class MeasurementTable extends Component {
     return (
       <React.Fragment>
         <div className="tableListHeaderTitle">
-          {this.props.t(measureGroup.groupName)}
+          {this.props.t(measureGroup.groupName) == 'Measurements' ? 'Anotações' : this.props.t(measureGroup.groupName)}
         </div>
         {measureGroup.maxMeasurements && (
           <div className="maxMeasurements">
@@ -189,7 +189,8 @@ class MeasurementTable extends Component {
     return timepoints.map((timepoint, index) => {
       return (
         <div key={index} className="measurementTableHeaderItem">
-          <div className="timepointLabel">{t(timepoint.key)}</div>
+          <div className="timepointLabel">
+            {t(timepoint.key) == 'StudyDate' ? 'Data do estudo' : t(timepoint.key)}</div>
           <div className="timepointDate">{timepoint.date}</div>
         </div>
       );

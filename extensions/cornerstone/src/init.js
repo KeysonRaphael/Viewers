@@ -24,8 +24,8 @@ export default function init({ servicesManager, configuration }) {
         useLastPosition: false,
         showOverlay: true,
         contentProps: {
-          title: 'Enter your annotation',
-          label: 'New label',
+          title: 'Nome da anotação',
+          label: 'Novo rótulo',
           measurementData: data ? { description: data.text } : {},
           onClose: () => UIDialogService.dismiss({ id: dialogId }),
           onSubmit: value => {

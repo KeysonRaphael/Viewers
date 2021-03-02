@@ -153,7 +153,7 @@ const LabellingFlow = ({
             items={OHIFLabellingData}
             columns={1}
             onSelected={selectTreeSelectCallback}
-            selectTreeFirstTitle="Assign Label"
+            selectTreeFirstTitle="Escolha o rótulo"
           />
         );
       } else {

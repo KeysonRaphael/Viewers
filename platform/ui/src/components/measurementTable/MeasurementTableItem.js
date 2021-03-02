@@ -56,7 +56,9 @@ class MeasurementTableItem extends Component {
         <span style={{ marginRight: '4px' }}>
           <Icon name="edit" width="14px" height="14px" />
         </span>
-        {this.props.t(btnLabel)}
+        {this.props.t(btnLabel) == 'Relabel' ? 'Re-rótular' : ''}
+        {this.props.t(btnLabel) == 'Description' ? 'Descrição' : ''}
+        {this.props.t(btnLabel) == 'Delete' ? 'Apagar' : ''}
       </button>
     );
   };

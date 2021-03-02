@@ -683,7 +683,7 @@ const _setActiveSegment = (firstImageId, segmentIndex, activeSegmentIndex, activ
 const SegmentsHeader = ({ count }) => {
   return (
     <React.Fragment>
-      <div className="tableListHeaderTitle">Segments</div>
+      <div className="tableListHeaderTitle">Seguimentos</div>
       <div className="numberOfItems">{count}</div>
     </React.Fragment>
   );

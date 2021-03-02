@@ -35,7 +35,9 @@ export class TableList extends Component {
     } else {
       return (
         <React.Fragment>
-          <div className="tableListHeaderTitle">{this.props.headerTitle}</div>
+          <div className="tableListHeaderTitle">
+            {this.props.headerTitle == 'Measurements' ? 'Anotações' : this.props.headerTitle}
+          </div>
           <div className="numberOfItems">{this.props.children.length}</div>
         </React.Fragment>
       );
