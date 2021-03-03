@@ -5,5 +5,5 @@
 }
 
 .viewport-container.active {
-  border: var(--viewport-border-thickness) solid var(--active-color);
+  border: var(--viewport-border-thickness) solid var(--ui-border-color-active);
 }

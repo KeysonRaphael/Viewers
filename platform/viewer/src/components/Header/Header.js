@@ -8,6 +8,8 @@ import { Dropdown, AboutContent, withModal } from '@ohif/ui';
 import { UserPreferences } from './../UserPreferences';
 import OHIFLogo from '../OHIFLogo/OHIFLogo.js';
 import './Header.css';
+import { BsArrowLeft } from "react-icons/bs";
+import { IconContext } from "react-icons";
 
 function Header(props) {
   const {
@@ -60,44 +62,37 @@ function Header(props) {
     setOptions(optionsValue);
   }, [setOptions, show, t, user, userManager]);
 
-  return (
-    <>
-      {/* <div className="notification-bar">{t('INVESTIGATIONAL USE ONLY')}</div>
-      <div
-        className={classNames('entry-header', { 'header-big': useLargeLogo })}
-      >
-        <div className="header-left-box">
-          {location && location.studyLink && (
-            <Link
-              to={location.studyLink}
-              className="header-btn header-viewerLink"
-            >
-              {t('Back to Viewer')}
-            </Link>
-          )}
+  if (hasLink) {
+    return (
+      <>
+        {/* <div className="notification-bar">{t('INVESTIGATIONAL USE ONLY')}</div> */}
+        <div
+          className={classNames('entry-header', { 'header-big': useLargeLogo })}
+        >
+          <div className="header-left-box">
+            {hasLink && (
+              <Link
+                className="header-btn header-studyListLinkSection"
+                to={{
+                  pathname: linkPath,
+                  state: { studyLink: location.pathname },
+                }}
+              >
+                {/* {t(linkText)} */}
+                {/* <IconContext.Provider value={{ color: "blue", size: '2em' }}>
+                  <BsArrowLeft></BsArrowLeft>
+                </IconContext.Provider> */}
+                Lista de Estudos
+              </Link>
+            )}
 
-          {children}
-
-          {hasLink && (
-            <Link
-              className="header-btn header-studyListLinkSection"
-              to={{
-                pathname: linkPath,
-                state: { studyLink: location.pathname },
-              }}
-            >
-              {t(linkText)}
-            </Link>
-          )}
+          </div>
         </div>
-
-        <div className="header-menu">
-          <span className="research-use">{t('INVESTIGATIONAL USE ONLY')}</span>
-          <Dropdown title={t('Options')} list={options} align="right" />
-        </div>
-      </div> */}
-    </>
-  );
+      </>
+    );
+  } else {
+    return '';
+  }
 }
 
 Header.propTypes = {

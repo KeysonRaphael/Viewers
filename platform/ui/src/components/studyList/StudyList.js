@@ -146,15 +146,13 @@ function StudyList(props) {
       <table
         className="table table--striped table--hoverable"
         style={{
-          border: '1px solid #ddd',
+          border: '1px solid var(--ui-gray-darker)',
           textAlign: 'left',
         }}
       >
         <thead>
           <tr style={{
-            border: '1px solid #ddd',
-            borderRadius: '5px',
-            borderCollapse: 'initial',
+            backgroundColor: 'var(--ui-gray-darkest)'
           }}>
             <th
               style={{
@@ -333,7 +331,7 @@ function TableRow(props) {
       }}
     >
       <td>{UnityName}</td>
-      <td>{RecordID}</td>
+      <td>{StudyInstanceUID}</td>
       <td colSpan="3">
         {PatientName ? PatientName : 'GABRIEL FREIRE DA SILVA DE SOUSA'}
       </td>
