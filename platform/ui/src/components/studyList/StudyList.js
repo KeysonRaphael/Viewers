@@ -144,7 +144,7 @@ function StudyList(props) {
         </thead>
       </table>
       <table
-        className="table table--striped table--hoverable table--responsive"
+        className="table table--striped table--hoverable"
         style={{
           border: '1px solid var(--ui-gray-darker)',
           textAlign: 'left',
@@ -323,15 +323,21 @@ function TableRow(props) {
   const largeRowTemplate = (
     <tr
       onClick={() => handleClick(StudyInstanceUID)}
+      style={{
+        width: '100%',
+        border: '1px solid #ddd',
+        borderRadius: '5px',
+        borderCollapse: 'initial',
+      }}
     >
       <td>{UnityName}</td>
-      <td>{RecordID}</td>
+      <td>{StudyInstanceUID}</td>
       <td colSpan="3">
         {PatientName ? PatientName : 'GABRIEL FREIRE DA SILVA DE SOUSA'}
       </td>
       {/* <td>{ExamType}</td> */}
       <td>{StudyDate}</td>
-      <td colSpan="3">{StudyDescription}</td>
+      <td colSpan="3">{ExamDescription}</td>
     </tr>
   );
   const mediumRowTemplate = (
@@ -352,21 +358,20 @@ function TableRow(props) {
     <tr
       onClick={() => handleClick(StudyInstanceUID)}
       style={{
-        display: 'block',
+        width: '100%',
+        border: '1px solid #ddd',
+        borderRadius: '5px',
+        borderCollapse: 'initial',
       }}
     >
-      <td data-label="Unidade" className="td--responsive">{UnityName}</td>
-      <td data-label="Prontuario"
-        className="td--responsive">{RecordID}</td>
-      <td data-label="Paciente"
-        className="td--responsive" colSpan="3">
+      <td>{UnityName}</td>
+      <td>{RecordID}</td>
+      <td colSpan="3">
         {PatientName ? PatientName : 'GABRIEL FREIRE DA SILVA DE SOUSA'}
       </td>
       {/* <td>{ExamType}</td> */}
-      <td data-label="Data do exame"
-        className="td--responsive">{StudyDate}</td>
-      <td data-label="Descrição do exame"
-        className="td--responsive" colSpan="3">{StudyDescription}</td>
+      <td>{StudyDate}</td>
+      <td colSpan="3">{ExamDescription}</td>
     </tr>
   );
 
