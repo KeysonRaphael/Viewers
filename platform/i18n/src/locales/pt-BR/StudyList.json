@@ -1,1 +1,10 @@
-{}
+{
+  "AccessionNumber": "AC Number",
+  "Description": "Descrição",
+  "Empty": "Vazio",
+  "MRN": "Prontuário",
+  "Modality": "Modalidade",
+  "PatientName": "Nome do Paciente",
+  "StudyDate": "Data do Estudo",
+  "StudyDescription": "Descrição do Estudo"
+}

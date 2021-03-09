@@ -87,9 +87,7 @@ function TableSearchFilter(props) {
             htmlFor={`filter-${fieldName}`}
             onClick={() => onSort(fieldName)}
           >
-            {`${displayText == 'Patient Name / MRN' ? 'Nome do Paciente / Prontuário' : ''}`}
-            {`${displayText == 'Description' ? 'Descrição do exame' : ''}`}
-            {`${displayText == 'Study Date' ? 'Data' : ''}`}
+            {`${displayText}`}
             <Icon name={sortIcon} style={{ fontSize: '12px' }} />
           </label>
           {inputType === 'text' && (

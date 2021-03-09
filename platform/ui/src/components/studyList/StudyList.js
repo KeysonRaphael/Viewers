@@ -304,10 +304,10 @@ function TableRow(props) {
     // AccessionNumber,
     // isHighlighted,
     // modalities,
-    // PatientID, //id do paciente(Ac. Number)2619416
+    PatientID, //id do paciente(Ac. Number)2619416
     RecordID = '2089970', //id do prontuario 1
     PatientName, //nome do paciente 1
-    UnityName = 'chn', //nome da unidade 1
+    UnityName = '1', //nome da unidade 1
     StudyDate, // 1
     StudyDescription,
     ExamDescription = 'DOPPLER VENOSO PROFUNDO DE MEMBRO INFERIOR DIREITO', //descrição do exame 1
@@ -325,7 +325,7 @@ function TableRow(props) {
       onClick={() => handleClick(StudyInstanceUID)}
     >
       <td>{UnityName}</td>
-      <td>{RecordID}</td>
+      <td>{PatientID}</td>
       <td colSpan="3">
         {PatientName ? PatientName : 'GABRIEL FREIRE DA SILVA DE SOUSA'}
       </td>
