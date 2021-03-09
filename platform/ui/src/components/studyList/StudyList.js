@@ -45,13 +45,13 @@ function StudyList(props) {
       displayText: t('PatientName'),
       fieldName: 'PatientName',
       inputType: 'text',
-      size: 330,
+      size: 300,
     },
     {
       displayText: t('MRN'),
       fieldName: 'PatientID',
       inputType: 'text',
-      size: 378,
+      size: 180,
     },
     {
       displayText: t('AccessionNumber'),
@@ -63,7 +63,7 @@ function StudyList(props) {
       displayText: t('StudyDate'),
       fieldName: 'StudyDate',
       inputType: 'date-range',
-      size: 300,
+      size: 220,
     },
     {
       displayText: t('Modality'),
@@ -195,6 +195,24 @@ function StudyList(props) {
               <b>Data do exame</b>
             </th>
             <th
+              style={{
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                paddingLeft: '8px',
+              }}
+            >
+              <b>AC number</b>
+            </th>
+            <th
+              style={{
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                paddingLeft: '8px',
+              }}
+            >
+              <b>Modalidade</b>
+            </th>
+            <th
               colSpan="3"
               style={{
                 paddingTop: '8px',
@@ -301,9 +319,9 @@ function appendRow() {
 
 function TableRow(props) {
   const {
-    // AccessionNumber,
+    AccessionNumber,
     // isHighlighted,
-    // modalities,
+    modalities,
     PatientID, //id do paciente(Ac. Number)2619416
     RecordID = '2089970', //id do prontuario 1
     PatientName, //nome do paciente 1
@@ -331,6 +349,8 @@ function TableRow(props) {
       </td>
       {/* <td>{ExamType}</td> */}
       <td>{StudyDate}</td>
+      <td>{AccessionNumber}</td>
+      <td>{modalities}</td>
       <td colSpan="3">{StudyDescription}</td>
     </tr>
   );
@@ -345,6 +365,8 @@ function TableRow(props) {
       </td>
       {/* <td>{ExamType}</td> */}
       <td>{StudyDate}</td>
+      <td>{AccessionNumber}</td>
+      <td>{modalities}</td>
       <td colSpan="3">{StudyDescription}</td>
     </tr>
   );
@@ -365,6 +387,8 @@ function TableRow(props) {
       {/* <td>{ExamType}</td> */}
       <td data-label="Data do exame"
         className="td--responsive">{StudyDate}</td>
+      <td data-label="AC number" className="td--responsive">{AccessionNumber}</td>
+      <td data-label="Modalidade" className="td--responsive">{modalities}</td>
       <td data-label="Descrição do exame"
         className="td--responsive" colSpan="3">{StudyDescription}</td>
     </tr>
