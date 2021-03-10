@@ -6,5 +6,6 @@
   "Modality": "Modalidade",
   "PatientName": "Nome do Paciente",
   "StudyDate": "Data do Estudo",
-  "StudyDescription": "Descrição do Estudo"
+  "StudyDescription": "Descrição do Estudo",
+  "Search": "Busca"
 }
