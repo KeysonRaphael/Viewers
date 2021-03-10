@@ -359,7 +359,7 @@ function TableRow(props) {
       onClick={() => handleClick(StudyInstanceUID)}
     >
       <td>{UnityName}</td>
-      <td>{RecordID}</td>
+      <td>{PatientID}</td>
       <td colSpan="3">
         {PatientName ? PatientName : 'GABRIEL FREIRE DA SILVA DE SOUSA'}
       </td>
@@ -379,7 +379,7 @@ function TableRow(props) {
     >
       <td data-label="Unidade" className="td--responsive">{UnityName}</td>
       <td data-label="Prontuario"
-        className="td--responsive">{RecordID}</td>
+        className="td--responsive">{PatientID}</td>
       <td data-label="Paciente"
         className="td--responsive" colSpan="3">
         {PatientName ? PatientName : 'GABRIEL FREIRE DA SILVA DE SOUSA'}

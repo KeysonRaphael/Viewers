@@ -182,7 +182,7 @@ function HotkeysPreferences({ onClose }) {
             })}
           </div>
         ) : (
-          'Hotkeys definitions is empty'
+          'Definições de atalhos vazia'
         )}
       </div>
       <TabFooter
