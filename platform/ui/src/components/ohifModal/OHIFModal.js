@@ -31,7 +31,7 @@ const OHIFModal = ({
     return (
       title && (
         <div className="OHIFModal__header" data-cy="modal-header">
-          <h4>{title}</h4>
+          <h4>{title == 'User Preferences' ? 'Preferências do usuario' : title}</h4>
           {closeButton && (
             <button data-cy="close-button" onClick={onClose}>
               ×

@@ -142,8 +142,8 @@ function HotkeysPreferences({ onClose }) {
               return (
                 <div className="hotkeyColumn" key={index}>
                   <div className="hotkeyHeader">
-                    <div className="headerItemText text-right">Function</div>
-                    <div className="headerItemText text-center">Shortcut</div>
+                    <div className="headerItemText text-right">Função</div>
+                    <div className="headerItemText text-center">Atalho</div>
                   </div>
                   {hotkeys.map(hotkey => {
                     const commandName = hotkey[0];

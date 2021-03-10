@@ -120,7 +120,7 @@
 @media only screen and (max-width: 768px) {
   .entry-header,
   .entry-header.header-big {
-    padding: 30px 15px 10px 15px;
+    padding: 10px 15px 10px 15px;
   }
   .entry-header.header-big .header-logo-image {
     margin: 0 10px 0 0;

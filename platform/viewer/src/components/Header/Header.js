@@ -29,15 +29,15 @@ function Header(props) {
 
   useEffect(() => {
     const optionsValue = [
-      {
-        title: t('About'),
-        icon: { name: 'info' },
-        onClick: () =>
-          show({
-            content: AboutContent,
-            title: t('mConnect Viewer - About'),
-          }),
-      },
+      // {
+      //   title: t('About'),
+      //   icon: { name: 'info' },
+      //   onClick: () =>
+      //     show({
+      //       content: AboutContent,
+      //       title: t('mConnect Viewer - About'),
+      //     }),
+      // },
       {
         title: t('Preferences'),
         icon: {
@@ -91,7 +91,14 @@ function Header(props) {
       </>
     );
   } else {
-    return '';
+    return <div
+      className={classNames('entry-header', { 'header-big': useLargeLogo })}
+    >
+      <div className="header-menu">
+        {/* <span className="research-use">{t('INVESTIGATIONAL USE ONLY')}</span> */}
+        <Dropdown title={t('Options')} list={options} align="right" />
+      </div>
+    </div>;
   }
 }
 

@@ -45,15 +45,6 @@ const definitions = [
     commandOptions: { toolName: 'StackScroll' },
   },
   {
-    id: 'Zoom',
-    label: 'Zoom',
-    icon: 'search-plus',
-    //
-    type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-    commandName: 'setToolActive',
-    commandOptions: { toolName: 'Zoom' },
-  },
-  {
     id: 'Wwwc',
     label: 'Levels',
     icon: 'level',
@@ -72,55 +63,64 @@ const definitions = [
     commandOptions: { toolName: 'Pan' },
   },
   {
-    id: 'Length',
-    label: 'Length',
-    icon: 'measure-temp',
-    //
-    type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-    commandName: 'setToolActive',
-    commandOptions: { toolName: 'Length' },
-  },
-  {
-    id: 'ArrowAnnotate',
-    label: 'Annotate',
-    icon: 'measure-non-target',
-    //
-    type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-    commandName: 'setToolActive',
-    commandOptions: { toolName: 'ArrowAnnotate' },
-  },
-  {
-    id: 'Angle',
-    label: 'Angle',
-    icon: 'angle-left',
-    //
-    type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-    commandName: 'setToolActive',
-    commandOptions: { toolName: 'Angle' },
-  },
-  {
-    id: 'Reset',
-    label: 'Reset',
-    icon: 'reset',
-    //
-    type: TOOLBAR_BUTTON_TYPES.COMMAND,
-    commandName: 'resetViewport',
-  },
-  {
-    id: 'Cine',
-    label: 'CINE',
-    icon: 'youtube',
-    //
-    type: TOOLBAR_BUTTON_TYPES.BUILT_IN,
-    options: {
-      behavior: TOOLBAR_BUTTON_BEHAVIORS.CINE,
-    },
-  },
-  {
     id: 'More',
     label: 'More',
     icon: 'ellipse-circle',
     buttons: [
+      {
+        id: 'Cine',
+        label: 'CINE',
+        icon: 'youtube',
+        //
+        type: TOOLBAR_BUTTON_TYPES.BUILT_IN,
+        options: {
+          behavior: TOOLBAR_BUTTON_BEHAVIORS.CINE,
+        },
+      },
+      {
+        id: 'Length',
+        label: 'Length',
+        icon: 'measure-temp',
+        //
+        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+        commandName: 'setToolActive',
+        commandOptions: { toolName: 'Length' },
+      },
+      {
+        id: 'ArrowAnnotate',
+        label: 'Annotate',
+        icon: 'measure-non-target',
+        //
+        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+        commandName: 'setToolActive',
+        commandOptions: { toolName: 'ArrowAnnotate' },
+      },
+      {
+        id: 'Angle',
+        label: 'Angle',
+        icon: 'angle-left',
+        //
+        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+        commandName: 'setToolActive',
+        commandOptions: { toolName: 'Angle' },
+      },
+      {
+        id: 'Reset',
+        label: 'Reset',
+        icon: 'reset',
+        //
+        type: TOOLBAR_BUTTON_TYPES.COMMAND,
+        commandName: 'resetViewport',
+      },
+      {
+        id: 'Zoom',
+        label: 'Zoom',
+        icon: 'search-plus',
+        //
+        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+        commandName: 'setToolActive',
+        commandOptions: { toolName: 'Zoom' },
+      },
       {
         id: 'Magnify',
         label: 'Magnify',

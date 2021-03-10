@@ -175,7 +175,13 @@ class ToolbarRow extends Component {
     };
     const onPressLeft = onPress.bind(this, 'left');
     const onPressRight = onPress.bind(this, 'right');
-
+    // var removed = buttonComponents.splice(4, 5);
+    // var objeto = { ...buttonComponents[4] };
+    // removed.forEach(function (item, index) {
+    //   objeto.props.buttons.push(item);
+    // });
+    // // buttonComponents[4] = objeto;
+    // console.log(buttonComponents);
     return (
       <>
         <div className="ToolbarRow">
@@ -187,7 +193,7 @@ class ToolbarRow extends Component {
             />
           </div>
           {buttonComponents}
-          <ConnectedLayoutButton />
+          {/* <ConnectedLayoutButton /> */}
           <div
             className="pull-right m-t-1 rm-x-1"
             style={{ marginLeft: 'auto' }}
