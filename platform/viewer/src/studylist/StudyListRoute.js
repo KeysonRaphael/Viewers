@@ -233,7 +233,7 @@ function StudyListRoute(props) {
             {t('Lista de estudos')}
           </h1>
         </div>
-        <div className="actions">
+        {/* <div className="actions">
           {studyListFunctionsEnabled && healthCareApiButtons}
           {studyListFunctionsEnabled && (
             <PageToolbar
@@ -241,7 +241,7 @@ function StudyListRoute(props) {
             />
           )}
           <span className="study-count">{studies.length}</span>
-        </div>
+        </div> */}
       </div>
 
       <div className="table-head-background" />

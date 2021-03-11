@@ -92,6 +92,13 @@ class TablePagination extends PureComponent {
     return (
       <div className="pagination-area">
         <div className="rows-dropdown">{this.renderRowsPerPageDropdown()}</div>
+        <span style={{
+          width: '60%',
+          color: '#4f8c81',
+          fontSize: '40px',
+          fontWeight: '100',
+          textAlign: 'center'
+        }}>{this.props.recordCount}</span>
         <div className="pagination-buttons">
           <div className="form-inline form-group page-number pull-right">
             {this.renderPaginationButtons()}
