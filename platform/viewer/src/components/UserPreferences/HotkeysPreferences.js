@@ -156,7 +156,7 @@ function HotkeysPreferences({ onClose }) {
 
                     return (
                       <div key={commandName} className="hotkeyRow">
-                        <div className="hotkeyLabel">{label}</div>
+                        <div className="hotkeyLabel">{t(label)}</div>
                         <div
                           data-key="defaultTool"
                           className={classnames(

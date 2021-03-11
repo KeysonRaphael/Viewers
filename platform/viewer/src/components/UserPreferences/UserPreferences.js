@@ -12,12 +12,12 @@ import './UserPreferences.styl';
 
 const tabs = [
   {
-    name: 'Presets',
+    name: 'Atalhos de teclado',
     Component: HotkeysPreferences,
     customProps: {},
   },
   {
-    name: 'Presets',
+    name: 'Janelamento',
     Component: WindowLevelPreferences,
     customProps: {},
   },
