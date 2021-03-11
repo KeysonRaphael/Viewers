@@ -25,7 +25,7 @@ function WindowLevelPreferences({ onClose }) {
   });
 
   const { t } = useTranslation('UserPreferencesModal');
-  const onResetPreferences = () => {};
+  const onResetPreferences = () => { };
   const hasErrors = false;
   const onSave = () => {
     dispatch(actions.setUserPreferences({ windowLevelData: state.values }));
@@ -67,7 +67,7 @@ function WindowLevelPreferences({ onClose }) {
         <div className="wlColumn">
           <div className="wlRow header">
             <div className="wlColumn preset">Preset</div>
-            <div className="wlColumn description">Description</div>
+            <div className="wlColumn description">Descrição</div>
             <div className="wlColumn window">Window</div>
             <div className="wlColumn level">Level</div>
           </div>

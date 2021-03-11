@@ -62,6 +62,13 @@ function Header(props) {
     setOptions(optionsValue);
   }, [setOptions, show, t, user, userManager]);
 
+  var title1;
+  var onclick1;
+  options.map((({ icon, title, link, onClick }, key) => {
+    title1 = title;
+    onclick1 = onClick;
+  }));
+
   if (hasLink) {
     return (
       <>
@@ -87,16 +94,23 @@ function Header(props) {
             )}
 
           </div>
+          <div className="header-menu">
+            {/* <span className="research-use">{t('INVESTIGATIONAL USE ONLY')}</span> */}
+            <button style={{ backgroundColor: '#4f8c81' }} className="btn btn-primary" onClick={onclick1}>{title1}</button>
+            {/* <Dropdown title={t('Options')} list={options} align="right" /> */}
+          </div>
         </div>
       </>
     );
   } else {
+
     return <div
       className={classNames('entry-header', { 'header-big': useLargeLogo })}
     >
       <div className="header-menu">
         {/* <span className="research-use">{t('INVESTIGATIONAL USE ONLY')}</span> */}
-        <Dropdown title={t('Options')} list={options} align="right" />
+        <button style={{ backgroundColor: '#4f8c81' }} className="btn btn-primary" onClick={onclick1}>{title1}</button>
+        {/* <Dropdown title={t('Options')} list={options} align="right" /> */}
       </div>
     </div>;
   }
