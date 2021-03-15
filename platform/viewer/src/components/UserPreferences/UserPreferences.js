@@ -21,11 +21,11 @@ const tabs = [
     Component: WindowLevelPreferences,
     customProps: {},
   },
-  {
-    name: 'General',
-    Component: GeneralPreferences,
-    customProps: {},
-  },
+  // {
+  //   name: 'General',
+  //   Component: GeneralPreferences,
+  //   customProps: {},
+  // },
 ];
 
 function UserPreferences({ hide }) {

@@ -18,7 +18,7 @@ const definitions = [
   },
   {
     id: 'WWWC',
-    label: 'WWWC',
+    label: 'W/L',
     icon: 'level',
     //
     type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
@@ -34,10 +34,9 @@ const definitions = [
     commandName: 'resetMPRView',
     commandOptions: {},
   },
-
   {
     id: 'Rotate',
-    label: 'Rotate',
+    label: 'Rotacionar',
     icon: '3d-rotate',
     //
     type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
@@ -65,7 +64,7 @@ const definitions = [
 
   {
     id: 'increaseSlabThickness',
-    label: 'Increase Slab Thickness',
+    label: 'Aumentar',
     icon: 'caret-up',
     //
     type: TOOLBAR_BUTTON_TYPES.COMMAND,
@@ -74,56 +73,56 @@ const definitions = [
   },
   {
     id: 'decreaseSlabThickness',
-    label: 'Decrease Slab Thickness',
+    label: 'Diminuir',
     icon: 'caret-down',
     //
     type: TOOLBAR_BUTTON_TYPES.COMMAND,
     commandName: 'decreaseSlabThickness',
     commandOptions: {},
   },
-  {
-    id: 'changeSlabThickness',
-    label: 'Espaçamento',
-    icon: 'soft-tissue',
-    CustomComponent: SlabThicknessToolbarComponent,
-    commandName: 'setSlabThickness',
-    actionButton: {
-      id: 'setSlabThickness',
-      label: 'slider',
-      type: TOOLBAR_BUTTON_TYPES.COMMAND,
-      commandName: 'setSlabThickness',
-      commandOptions: {},
-    },
-    deactivateButton: {
-      id: 'setBlendModeToComposite',
-      type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-      commandName: 'setBlendModeToComposite',
-      commandOptions: {},
-    },
-    operationButtons: [
-      {
-        id: 'setBlendModeToMaximumIntensity',
-        label: 'MIP',
-        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-        commandName: 'setBlendModeToMaximumIntensity',
-        commandOptions: {},
-      },
-      {
-        id: 'setBlendModeToMinimumIntensity',
-        label: 'MinIP',
-        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-        commandName: 'setBlendModeToMinimumIntensity',
-        commandOptions: {},
-      },
-      {
-        id: 'setBlendModeToAverageIntensity',
-        label: 'AvgIP',
-        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-        commandName: 'setBlendModeToAverageIntensity',
-        commandOptions: {},
-      },
-    ],
-  },
+  // {
+  //   id: 'changeSlabThickness',
+  //   label: 'Espaçamento',
+  //   icon: 'soft-tissue',
+  //   CustomComponent: SlabThicknessToolbarComponent,
+  //   commandName: 'setSlabThickness',
+  //   actionButton: {
+  //     id: 'setSlabThickness',
+  //     label: 'slider',
+  //     type: TOOLBAR_BUTTON_TYPES.COMMAND,
+  //     commandName: 'setSlabThickness',
+  //     commandOptions: {},
+  //   },
+  //   deactivateButton: {
+  //     id: 'setBlendModeToComposite',
+  //     type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+  //     commandName: 'setBlendModeToComposite',
+  //     commandOptions: {},
+  //   },
+  //   operationButtons: [
+  //     {
+  //       id: 'setBlendModeToMaximumIntensity',
+  //       label: 'MIP',
+  //       type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+  //       commandName: 'setBlendModeToMaximumIntensity',
+  //       commandOptions: {},
+  //     },
+  //     {
+  //       id: 'setBlendModeToMinimumIntensity',
+  //       label: 'MinIP',
+  //       type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+  //       commandName: 'setBlendModeToMinimumIntensity',
+  //       commandOptions: {},
+  //     },
+  //     {
+  //       id: 'setBlendModeToAverageIntensity',
+  //       label: 'AvgIP',
+  //       type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+  //       commandName: 'setBlendModeToAverageIntensity',
+  //       commandOptions: {},
+  //     },
+  //   ],
+  // },
   {
     id: '2DMPR',
     label: '2D MPR',

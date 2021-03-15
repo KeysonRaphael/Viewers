@@ -87,7 +87,7 @@ function StudyList(props) {
       size: 250,
     },
     {
-      displayText: t('Description'),
+      displayText: 'Descrição / AC / Mod',
       fieldName: 'accessionOrModalityOrDescription',
       inputType: 'text',
       size: 350,
