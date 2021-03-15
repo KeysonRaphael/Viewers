@@ -336,6 +336,8 @@ function TableRow(props) {
     displaySize,
   } = props;
 
+
+
   // const { t } = useTranslation('StudyList');
 
   const largeRowTemplate = (
