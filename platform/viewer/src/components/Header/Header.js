@@ -8,7 +8,7 @@ import { Dropdown, AboutContent, withModal } from '@ohif/ui';
 import { UserPreferences } from './../UserPreferences';
 import OHIFLogo from '../OHIFLogo/OHIFLogo.js';
 import './Header.css';
-import { BsArrowLeft } from "react-icons/bs";
+import { GrConfigure } from "react-icons/gr";
 import { IconContext } from "react-icons";
 
 function Header(props) {
@@ -95,9 +95,13 @@ function Header(props) {
 
           </div>
           <div className="header-menu">
-            {/* <span className="research-use">{t('INVESTIGATIONAL USE ONLY')}</span> */}
-            <button style={{ backgroundColor: '#4f8c81' }} className="btn btn-primary" onClick={onclick1}>{title1}</button>
-            {/* <Dropdown title={t('Options')} list={options} align="right" /> */}
+            <div style={{ backgroundColor: '#4f8c81', color: 'white' }} className="btn btn-primary" onClick={onclick1}>
+              <IconContext.Provider value={{ color: "white" }}>
+                <div>
+                  <GrConfigure />
+                </div>
+              </IconContext.Provider>
+            </div>
           </div>
         </div>
       </>
@@ -109,7 +113,13 @@ function Header(props) {
     >
       <div className="header-menu">
         {/* <span className="research-use">{t('INVESTIGATIONAL USE ONLY')}</span> */}
-        <button style={{ backgroundColor: '#4f8c81' }} className="btn btn-primary" onClick={onclick1}>{title1}</button>
+        <div style={{ backgroundColor: '#4f8c81', color: 'white' }} className="btn btn-primary" onClick={onclick1}>
+          <IconContext.Provider value={{ color: "white" }}>
+            <div>
+              <GrConfigure />
+            </div>
+          </IconContext.Provider>
+        </div>
         {/* <Dropdown title={t('Options')} list={options} align="right" /> */}
       </div>
     </div>;

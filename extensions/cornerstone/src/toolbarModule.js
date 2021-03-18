@@ -45,6 +45,15 @@ const definitions = [
     commandOptions: { toolName: 'StackScroll' },
   },
   {
+    id: 'Zoom',
+    label: 'Zoom',
+    icon: 'search-plus',
+    //
+    type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
+    commandName: 'setToolActive',
+    commandOptions: { toolName: 'Zoom' },
+  },
+  {
     id: 'Wwwc',
     label: 'Levels',
     icon: 'level',
@@ -61,24 +70,6 @@ const definitions = [
     type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
     commandName: 'setToolActive',
     commandOptions: { toolName: 'Pan' },
-  },
-  {
-    id: 'RotateRight',
-    label: 'Rotate Right',
-    icon: 'rotate-right',
-    //
-    type: TOOLBAR_BUTTON_TYPES.COMMAND,
-    commandName: 'rotateViewportCW',
-  },
-  {
-    id: 'Cine',
-    label: 'CINE',
-    icon: 'youtube',
-    //
-    type: TOOLBAR_BUTTON_TYPES.BUILT_IN,
-    options: {
-      behavior: TOOLBAR_BUTTON_BEHAVIORS.CINE,
-    },
   },
   {
     id: 'Length',
@@ -116,19 +107,20 @@ const definitions = [
     commandName: 'resetViewport',
   },
   {
+    id: 'Cine',
+    label: 'CINE',
+    icon: 'youtube',
+    //
+    type: TOOLBAR_BUTTON_TYPES.BUILT_IN,
+    options: {
+      behavior: TOOLBAR_BUTTON_BEHAVIORS.CINE,
+    },
+  },
+  {
     id: 'More',
     label: 'More',
     icon: 'ellipse-circle',
     buttons: [
-      {
-        id: 'Zoom',
-        label: 'Zoom',
-        icon: 'search-plus',
-        //
-        type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
-        commandName: 'setToolActive',
-        commandOptions: { toolName: 'Zoom' },
-      },
       {
         id: 'Magnify',
         label: 'Magnify',
@@ -137,6 +129,14 @@ const definitions = [
         type: TOOLBAR_BUTTON_TYPES.SET_TOOL_ACTIVE,
         commandName: 'setToolActive',
         commandOptions: { toolName: 'Magnify' },
+      },
+      {
+        id: 'RotateRight',
+        label: 'Rotate Right',
+        icon: 'rotate-right',
+        //
+        type: TOOLBAR_BUTTON_TYPES.COMMAND,
+        commandName: 'rotateViewportCW',
       },
       {
         id: 'WwwcRegion',
