@@ -193,7 +193,7 @@ class ToolbarRow extends Component {
             />
           </div>
           {buttonComponents}
-          <ConnectedLayoutButton />
+          {screen.width > 1000 & <ConnectedLayoutButton />}
           <div
             className="pull-right m-t-1 rm-x-1"
             style={{ marginLeft: 'auto' }}
@@ -333,14 +333,24 @@ function _getVisibleToolbarButtons() {
   const toolbarButtonDefinitions = [];
 
   toolbarModules.forEach(extension => {
-    const { definitions, defaultContext } = extension.module;
-    definitions.forEach(definition => {
-      const context = definition.context || defaultContext;
+    const { definitions, definitionsM, defaultContext } = extension.module;
+    if (screen.width < 1000) {
+      definitionsM.forEach(definition => {
+        const context = definition.context || defaultContext;
 
-      if (this.props.activeContexts.includes(context)) {
-        toolbarButtonDefinitions.push(definition);
-      }
-    });
+        if (this.props.activeContexts.includes(context)) {
+          toolbarButtonDefinitions.push(definition);
+        }
+      });
+    } else {
+      definitions.forEach(definition => {
+        const context = definition.context || defaultContext;
+
+        if (this.props.activeContexts.includes(context)) {
+          toolbarButtonDefinitions.push(definition);
+        }
+      });
+    }
   });
 
   return toolbarButtonDefinitions;

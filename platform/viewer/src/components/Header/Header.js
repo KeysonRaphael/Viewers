@@ -68,7 +68,18 @@ function Header(props) {
     title1 = title;
     onclick1 = onClick;
   }));
-
+  let preferencias;
+  if (screen.width > 1000) {
+    preferencias = <div className="header-menu">
+      <div style={{ backgroundColor: '#4f8c81', color: 'white' }} className="btn btn-primary" onClick={onclick1}>
+        <IconContext.Provider value={{ color: "white" }}>
+          <div>
+            <GrConfigure />
+          </div>
+        </IconContext.Provider>
+      </div>
+    </div>;
+  }
   if (hasLink) {
     return (
       <>
@@ -94,15 +105,7 @@ function Header(props) {
             )}
 
           </div>
-          <div className="header-menu">
-            <div style={{ backgroundColor: '#4f8c81', color: 'white' }} className="btn btn-primary" onClick={onclick1}>
-              <IconContext.Provider value={{ color: "white" }}>
-                <div>
-                  <GrConfigure />
-                </div>
-              </IconContext.Provider>
-            </div>
-          </div>
+          {preferencias}
         </div>
       </>
     );
@@ -113,13 +116,7 @@ function Header(props) {
     >
       <div className="header-menu">
         {/* <span className="research-use">{t('INVESTIGATIONAL USE ONLY')}</span> */}
-        <div style={{ backgroundColor: '#4f8c81', color: 'white' }} className="btn btn-primary" onClick={onclick1}>
-          <IconContext.Provider value={{ color: "white" }}>
-            <div>
-              <GrConfigure />
-            </div>
-          </IconContext.Provider>
-        </div>
+        {preferencias}
         {/* <Dropdown title={t('Options')} list={options} align="right" /> */}
       </div>
     </div>;

@@ -7,7 +7,7 @@ const TOOLBAR_BUTTON_TYPES = {
 };
 
 */
-
+const definitionsM = [];
 const definitions = []; /* TODO: Creation tools (future release). [
   {
     id: 'SegDropdown',
@@ -56,5 +56,6 @@ const definitions = []; /* TODO: Creation tools (future release). [
 
 export default {
   definitions,
+  definitionsM,
   defaultContext: 'ACTIVE_VIEWPORT::CORNERSTONE',
 };
