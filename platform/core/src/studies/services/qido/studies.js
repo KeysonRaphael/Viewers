@@ -42,7 +42,7 @@ function getQIDOQueryParams(filter, serverSupportsQIDOIncludeField) {
     AccessionNumber: filter.AccessionNumber,
     StudyDescription: filter.StudyDescription,
     ModalitiesInStudy: filter.ModalitiesInStudy,
-    limit: filter.limit,
+    limit: '100',
     offset: filter.offset,
     fuzzymatching: filter.fuzzymatching,
     includefield: serverSupportsQIDOIncludeField ? commaSeparatedFields : 'all',
