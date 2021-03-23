@@ -259,6 +259,16 @@ const definitionsM = [
     commandOptions: { toolName: 'Pan' },
   },
   {
+    id: 'Cine',
+    label: 'CINE',
+    icon: 'youtube',
+    //
+    type: TOOLBAR_BUTTON_TYPES.BUILT_IN,
+    options: {
+      behavior: TOOLBAR_BUTTON_BEHAVIORS.CINE,
+    },
+  },
+  {
     id: 'More',
     label: 'More',
     icon: 'ellipse-circle',
@@ -297,16 +307,6 @@ const definitionsM = [
         //
         type: TOOLBAR_BUTTON_TYPES.COMMAND,
         commandName: 'resetViewport',
-      },
-      {
-        id: 'Cine',
-        label: 'CINE',
-        icon: 'youtube',
-        //
-        type: TOOLBAR_BUTTON_TYPES.BUILT_IN,
-        options: {
-          behavior: TOOLBAR_BUTTON_BEHAVIORS.CINE,
-        },
       },
       {
         id: 'StackScroll',
