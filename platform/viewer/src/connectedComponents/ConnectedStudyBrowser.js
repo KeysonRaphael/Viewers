@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { StudyBrowser } from '@ohif/ui';
 import cloneDeep from 'lodash.clonedeep';
 import findDisplaySetByUID from './findDisplaySetByUID';
+import setCornerstoneLayout from '../../../../extensions/cornerstone/src/utils/setCornerstoneLayout.js';
 
 const { studyMetadataManager } = OHIF.utils;
 
@@ -41,6 +42,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onThumbnailClick: displaySetInstanceUID => {
+      setCornerstoneLayout();
       let displaySet = findDisplaySetByUID(
         ownProps.studyMetadata,
         displaySetInstanceUID
