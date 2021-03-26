@@ -45,7 +45,7 @@ const definitions = [
   },
   {
     id: 'setBlendModeToComposite',
-    label: 'Disable MIP',
+    label: 'MIP Off',
     icon: 'times',
     //
     type: TOOLBAR_BUTTON_TYPES.COMMAND,
@@ -54,7 +54,7 @@ const definitions = [
   },
   {
     id: 'setBlendModeToMaximumIntensity',
-    label: 'Enable MIP',
+    label: 'MIP On',
     icon: 'soft-tissue',
     //
     type: TOOLBAR_BUTTON_TYPES.COMMAND,
@@ -174,7 +174,7 @@ const definitionsM = [
   },
   {
     id: 'setBlendModeToComposite',
-    label: 'Disable MIP',
+    label: 'MIP Off',
     icon: 'times',
     //
     type: TOOLBAR_BUTTON_TYPES.COMMAND,
@@ -183,7 +183,7 @@ const definitionsM = [
   },
   {
     id: 'setBlendModeToMaximumIntensity',
-    label: 'Enable MIP',
+    label: 'MIP On',
     icon: 'soft-tissue',
     //
     type: TOOLBAR_BUTTON_TYPES.COMMAND,

@@ -60,7 +60,7 @@ class RoundedButtonGroup extends Component {
 
       const bottomLabel = option.bottomLabel && (
         <div className="bottomLabel">
-          {option.bottomLabel == 'Measurements' ? 'Anotações' : option.bottomLabel}
+          {option.bottomLabel == 'Measurements' ? 'Notas' : option.bottomLabel}
         </div>
       );
 

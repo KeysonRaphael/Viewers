@@ -182,28 +182,36 @@ class ToolbarRow extends Component {
     // });
     // // buttonComponents[4] = objeto;
     // console.log(buttonComponents);
+    var styla = {};
+    if (screen.width < 1000) {
+      styla = { display: 'flex', flexWrap: 'nowrap', overflowX: 'scroll' };
+    }
     return (
       <>
         <div className="ToolbarRow">
-          <div className="pull-left m-t-1 p-y-1" style={{ padding: '10px' }}>
+          <div className="pull-left m-t-1 p-y-1" style={{ padding: '0px' }}>
             <RoundedButtonGroup
               options={this.buttonGroups.left}
               value={this.props.selectedLeftSidePanel || ''}
               onValueChanged={onPressLeft}
             />
           </div>
-          {buttonComponents}
+          <div style={styla}>
+            {buttonComponents}
+          </div>
           <ConnectedLayoutButton />
           <div
             className="pull-right m-t-1 rm-x-1"
-            style={{ marginLeft: 'auto' }}
+          // style={{ marginLeft: 'auto' }}
           >
             {this.buttonGroups.right.length && (
-              <RoundedButtonGroup
-                options={this.buttonGroups.right}
-                value={this.props.selectedRightSidePanel || ''}
-                onValueChanged={onPressRight}
-              />
+              <div style={{ width: '40px' }}>
+                <RoundedButtonGroup
+                  options={this.buttonGroups.right}
+                  value={this.props.selectedRightSidePanel || ''}
+                  onValueChanged={onPressRight}
+                />
+              </div>
             )}
           </div>
         </div>
