@@ -275,7 +275,7 @@ function StudyListRoute(props) {
           rowsPerPage={rowsPerPage}
           recordCount={studies.length}
         />
-        <div style={{ color: 'white', textAlign: 'right' }}>versão: 2021.03.26.1.2.9</div>
+        <div style={{ color: 'white', textAlign: 'right' }}>versão: 2021.04.05.1.3.0</div>
       </div>
     </>
   );

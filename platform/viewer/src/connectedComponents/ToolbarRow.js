@@ -184,7 +184,7 @@ class ToolbarRow extends Component {
     // console.log(buttonComponents);
     var styla = {};
     if (screen.width < 1000) {
-      styla = { display: 'flex', flexWrap: 'nowrap', overflowX: 'scroll' };
+      styla = { display: 'flex', flexWrap: 'nowrap', overflowX: 'scroll', overflowY: 'hidden', paddingBottom: '15px' };
     }
     return (
       <>
@@ -205,7 +205,7 @@ class ToolbarRow extends Component {
           // style={{ marginLeft: 'auto' }}
           >
             {this.buttonGroups.right.length && (
-              <div style={{ width: '40px' }}>
+              <div style={{ width: '40px', paddingLeft: '40px' }}>
                 <RoundedButtonGroup
                   options={this.buttonGroups.right}
                   value={this.props.selectedRightSidePanel || ''}
